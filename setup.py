@@ -12,6 +12,12 @@ package_data = {}
 # All executables are here
 console_scripts = []
 
+classifiers = [
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8"]
+
+
 setup(name='gzinfo',
       version=__version__,
       author='Pierre-Selim',
@@ -19,6 +25,7 @@ setup(name='gzinfo',
       url='https://github.com/PierreSelim/gzinfo',
       description='Retrieving archive filename from gz files in Python ',
       license='MIT Licence',
+      classifiers=classifiers,
       packages=packages,
       package_data=package_data,
       install_requires=requires,
