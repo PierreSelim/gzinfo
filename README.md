@@ -1,7 +1,7 @@
 # Gzip Information
 [![Build Status](https://travis-ci.com/PierreSelim/gzinfo.svg?branch=master)](https://travis-ci.com/PierreSelim/gzinfo)
 
-Getting the original filename form gzip archive.
+Getting the original filename form gzip archive in Python.
 
 ## Install
 from github directly:
