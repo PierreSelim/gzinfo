@@ -13,8 +13,8 @@ pip install git+https://github.com/PierreSelim/gzinfo.git
 
 ## Usage
 
-If you gzip a file called `foo.txt` and rename the archive `bar.txt` you can 
-still retrive the original name from the header (per 
+If you gzip a file called `foo.txt` and rename the archive `bar.txt.gz` you can
+still retrive the original name from the header (per
 [RFC1952](https://tools.ietf.org/html/rfc1952))
 
 ```python
