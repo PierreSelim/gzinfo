@@ -5,8 +5,8 @@ from dataclasses import dataclass
 from typing import Optional
 
 
-@dataclass
-class GzInfo(object):
+@dataclass(frozen=True)
+class GzInfo:
     fname: str
     method: int
     flag: int

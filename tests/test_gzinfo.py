@@ -1,18 +1,12 @@
 import os
-import unittest
-
-import gzinfo
-
-
-class TestGzinfo(unittest.TestCase):
-    def test_gzinfo(self):
-        filename = os.path.join(os.path.dirname(__file__),
-                                'bar.txt.gz')
-        info = gzinfo.read_gz_info(filename)
-
-        self.assertIsNotNone(info)
-        self.assertEqual('foo.txt', info.fname)
+import pytest
+import gzinfo as gz
 
 
-if __name__ == '__main__':
-    unittest.main()
+FIXTURE = os.path.join(os.path.dirname(__file__), "bar.txt.gz")
+
+
+def test_gzinfo_is_frozen():
+    info = gz.GzInfo(fname="foo.txt", method=8, flag=8, last_mtime=0)
+    with pytest.raises(Exception):
+        info.fname = "bar.txt"
