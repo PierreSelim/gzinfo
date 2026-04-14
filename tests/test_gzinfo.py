@@ -1,9 +1,19 @@
 import os
+import pathlib
+
 import pytest
+
 import gzinfo as gz
 
 
-FIXTURE = os.path.join(os.path.dirname(__file__), "bar.txt.gz")
+
+FIXTURE_FILENAME = pathlib.Path(os.path.dirname(__file__)) / "bar.txt.gz"
+
+
+def test_read_gz_info_returns_correct_fname():
+    info = gz.read_gz_info(FIXTURE_FILENAME)
+    assert info is not None
+    assert info.fname == "foo.txt"
 
 
 def test_gzinfo_is_frozen():
