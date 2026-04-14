@@ -6,7 +6,6 @@ import pytest
 import gzinfo as gz
 
 
-
 FIXTURE_FILENAME = pathlib.Path(os.path.dirname(__file__)) / "bar.txt.gz"
 
 
